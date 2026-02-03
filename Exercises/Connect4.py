@@ -16,7 +16,7 @@ COLUMNS = 7
 
 # Status for if the game has been won or not
 gameWon = False
-# Status for if the game has been drawn or not
+#Status for if the game has been drawn or not
 gameDraw = False
 # Status for the current player's turn
 currentPlayer = Tile.RED
@@ -37,6 +37,7 @@ def main():
     while not gameWon and not gameDraw:
         # Let the player see the current board
         printBoard()
+
         # Ask for current players input. input returns a string
         columnSelection = input('Select a column to place your tile. It is ' + currentPlayer.name + ' Player\'s turn')
 
@@ -75,9 +76,11 @@ def main():
     if gameWon: 
         print(currentPlayer.name + ' Player won!')
     elif gameDraw:
-        # print a statement saying that game is a draw!
-        print("The game is a draw!")
+        # EXERCISE: print a statement saying that game is a draw!
+        pass
     return
+
+
 
 # Helper function to print our the current game board
 def printBoard():
@@ -225,11 +228,10 @@ def isDiagWin (col, row, color):
     return False
 
 def checkForDraw():
-    # make sure that each column has 6 pieces
-    for i in range(7):
-        if len(board[i]) != 6:
-            return False
-    return True
+    # EXERCISE: make sure that each column has 6 pieces
+    # return True if the board is full. Since we already check for a win, it's a draw
+    # return False if the board isn't full
+    pass
 
 # Call the main function
 if __name__ == '__main__':
