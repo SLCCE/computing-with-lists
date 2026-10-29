@@ -26,7 +26,7 @@ board = []
 
 def main():
     # Tells main that these variable are global and allow main to access them
-    global gameWon, currentPlayer, board
+    global gameWon, currentPlayer, board, gameDraw
     # Create columns of board by adding a list to represent each column to be used as a stack
     for i in range(COLUMNS):
         board.append([])
